@@ -77,3 +77,10 @@ function addToWishlist(id) {
   alert("Added to wishlist!");
 }
 
+// -------------------- UPDATE WISHLIST COUNT --------------------
+function updateWishlistCount() {
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  document.getElementById("wishlist-count").innerText = wishlist.length;
+}
+
+updateWishlistCount();
